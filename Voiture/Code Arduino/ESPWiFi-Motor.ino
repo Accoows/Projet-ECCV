@@ -28,18 +28,18 @@ char pass[] = "ECCV01234";
 // Motor PIN Direction
 //      TEST
 //Motor A
-#define D12 4  // Direction A (GPIO4 - D2)
-#define D3 0   // PWM Motor A (GPIO0 - D3)
-#define D9 2   // Brake Motor A (GPIO2 - D4)
+#define directionPin_A 4    // Direction A (GPIO4 - D2) (Shield_D12)
+#define speedMotor_A 0                // PWM Motor A (GPIO0 - D3) (Shield_D3)
+#define brakeMotor_A 2                // Brake Motor A (GPIO2 - D4) (Shield_D9)
 //Motor B
-#define D13 12 // Direction B (GPIO12 - D6)
-#define D11 13 // PWN Motor B (GPIO13 - D7)
-#define D8 15  // Brake Motor B (GPIO15 - D8)
+#define directionPin_B 12   // Direction B (GPIO12 - D6) (Shield_D13)
+#define speedMotor_B 13              // PWN Motor B (GPIO13 - D7) (Shield_D11)
+#define brakeMotor_B 15               // Brake Motor B (GPIO15 - D8)  (Shield_D8)
 
 //Code
 void setup()
 {
-    //none
+    //Configure Pins
 }
 
 void loop()
