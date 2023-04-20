@@ -1,5 +1,6 @@
 //
 //  GitHub ESP8266: https://github.com/esp8266/Arduino
+//  ESP8266 Docs: https://arduino-esp8266.readthedocs.io/en/3.1.2/index.html
 //  JSON ESP8266 Add: https://arduino.esp8266.com/stable/package_esp8266com_index.json
 //  Blynk Library: https://github.com/blynkkk/blynk-library/releases/tag/v1.2.0
 //  Blynk Docs: https://docs.blynk.io/en/
