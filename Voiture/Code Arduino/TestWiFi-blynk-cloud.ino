@@ -36,6 +36,8 @@ char pass[] = "ECCV01234";
 #define speedMotor_B 13     // (Speed) PWN Motor B (GPIO13 - D7) (Shield_D11)
 #define brakeMotor_B 15     // Brake Motor B (GPIO15 - D8)  (Shield_D8)
 
+int motor_right_speed = 0;
+int motor_left_speed = 0;
 
 //Code
 void setup()
@@ -43,8 +45,8 @@ void setup()
     //Configure Pins
     pinMode(directionPin_A, OUTPUT);
     pinMode(directionPin_B, OUTPUT);
-    pinMode(speedMotor_A, OUTPUT); //(ENA - PWM)
-    pinMode(speedMotor_B, OUTPUT); //(ENB - PWM)
+    pinMode(speedMotor_A, OUTPUT); //(ENA)
+    pinMode(speedMotor_B, OUTPUT); //(ENB)
     pinMode(brakeMotor_A, OUTPUT);
     pinMode(brakeMotor_B, OUTPUT);
 
@@ -52,9 +54,6 @@ void setup()
     digitalWrite(speedMotor_A, LOW);
     digitalWrite(speedMotor_B, LOW);
 
-    Blynk.virtualWrite(V0, 0);
-    Blynk.virtualWrite(V1, 0);
-    
     //Serial communication
     Serial.begin(9600);
 
@@ -62,49 +61,9 @@ void setup()
     Blynk.begin(auth, ssid, pass);
 }
 
-// SLIDER CONTROLER GAUCHE
-BLYNK_WRITE(V0) {
-  int speedGauche = param.asInt(); // lecture slider gauche (Vérifier le [])
-  Serial.print("Speed Gauche: ");
-  Serial.println(speedGauche); //Affichage valeur G
-  if (speedGauche > 500) {                              //Forward G
-    analogWrite(speedMotor_B,speedGauche);
-    digitalWrite(directionPin_B,HIGH);
-    digitalWrite(brakeMotor_B,LOW);
-  }
-  else if (speedGauche < -500) {                        //Backward G
-    analogWrite(speedMotor_B,-speedGauche);
-    digitalWrite(directionPin_B,LOW);
-    digitalWrite(brakeMotor_B,LOW);
-  }
-  else {                                                //Stop
-    analogWrite(speedMotor_B, 0);
-    digitalWrite(brakeMotor_B,HIGH);
-  }
-}
+// JOYSTICK
 
-// SLIDER CONTROLER DROITE
-BLYNK_WRITE(V1) {
-  int speedDroit = param.asInt(); // lecture slider droit (Vérifier le [])
-  Serial.print("Speed Droit: ");
-  Serial.println(speedDroit); //Affichage valeur D
-  if (speedDroit > 500) {                               //Forward D
-    analogWrite(speedMotor_A,speedDroit);
-    digitalWrite(directionPin_A,LOW);
-    digitalWrite(brakeMotor_A,LOW);
-  }
-  else if (speedDroit < -500) {                         //Backward D
-    analogWrite(speedMotor_A,-speedDroit);
-    digitalWrite(directionPin_A,HIGH);
-    digitalWrite(brakeMotor_A,LOW);
-  }
-  else {                                                //Stop
-    analogWrite(speedMotor_A, 0);
-    digitalWrite(brakeMotor_A,HIGH);
-  }
-}
 
-//Démarrage du système Blynk
 void loop()
 {
     Blynk.run();
