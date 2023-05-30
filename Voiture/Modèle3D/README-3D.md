@@ -2,11 +2,11 @@ Les modèles 3D ont étaient réalisés à l'aide de Tinkercad et Blender.
 
 Les fichiers comportent :
 
-- Le fichier complet de tout le projet
-- Le bas de caisse individuel
-- La pièce complémentaire du bas de caisse
-- Le modèle 3D de la chenille (par ebraud)
-- La roue adapté à la chenille 3D (par ebraud)
+- Le concept de tout le projet
+- le modèle 3D de la caisse final
+- Des pièces divers (axes de roues, axes chenilles)
+- Le modèle 3D de la chenille (par ebraud modifié par Alec)
+- La roue adapté à la chenille 3D (par ebraud modifié par Alec)
 
 
 Exploitation de modèle disponible pour la réalisation des chenilles : https://www.thingiverse.com/thing:2981163/files
