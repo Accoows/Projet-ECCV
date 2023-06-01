@@ -1,5 +1,7 @@
 ### La réalisation du projet s'est déroulée en plusieurs étapes.
 
+### Début le 17 mars
+
 Au cours des premières semaines de préparation du projet, j'ai concentré mes efforts sur la recherche de composants qui répondraient au mieux à nos attentes pour le projet que nous avions imaginé. Tout d'abord, j'ai examiné les fondements du projet et son objectif, qui était de créer un objet ou autre dispositif offrant une connexion radiofréquence. Pour notre utilisation et la polyvalence du système, j'ai choisi une carte WiFi ESP8266. Avec cette carte, nous pouvons créer une télécommande sans fil utilisable par toutes les personnes possédant un smartphone. La seconde carte utilisée simultanément est un pont H L298N, qui, comme son nom l'indique, est un pont H. Cette carte nous permet de régler individuellement la puissance et la vitesse de deux moteurs de manière indépendante, ce qui correspond parfaitement à nos exigences. Les autres composants restent standards, et la conception de la partie en 3D de "l'engin" est réalisée par Alec et Jules.
 
 ### À partir du 12 avril environ
