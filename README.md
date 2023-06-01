@@ -17,3 +17,15 @@ L'objectif est d'obtenir une portée de signal supérieure à 20 mètres en util
 ![BlynkExample](https://cdn.discordapp.com/attachments/1073556996273471528/1113856982949052457/architecture.png)
 
 # Matériel utilisé
+
+###Pour réaliser l'engin chenillé, vous aurez besoin des éléments suivants :
+- x1 Carte ESP8266 NodeMCU Amica V2 (ESP-12F)
+- x1 Un Pont H L298N
+- x1 Une breadboard (Cable management)
+- x1 Une batterie externe
+- x1 Support de piles 12V
+- x2 Moteur DC - 12V
+- Caisse- Impression 3D
+- Roues et Chenilles - Impression 3D
+- Beaucoups de fils
+- Du polystyrène
