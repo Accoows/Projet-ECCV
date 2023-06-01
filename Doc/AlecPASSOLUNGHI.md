@@ -24,3 +24,10 @@ Par exemple, il était nécessaire de laisser suffisamment d'espace pour que les
 Enfin, il y avait aussi l'emplacement des roulements à billes qui devait permettre de fixer les moteurs (pour ceux à l'avant) et être suffisamment bas pour que le châssis ne soit pas en contact avec le sol. 
 Ensuite, est venue la phase d'impression qui n'a pas été sans quelques échecs. 
 Tout d'abord, nous avons dû apprendre à utiliser les logiciels associés aux imprimantes, puis nous avons dû faire face à des impressions ratées, en particulier sur les chenilles et les axes, qui ont dû être modifiés pour faciliter l'impression.
+Enfin, il s'est avéré que l'ensemble final était trop massif pour les moteurs électriques dont nous disposions. Si je devais revenir sur le projet, j'opterais pour des moteurs au moins deux fois plus puissants.
+
+### Conclusion :
+
+Le projet ECCV était ambitieux dès le départ, mais nous avons réussi à réaliser une partie importante du développement. Malgré le revers lié à la puissance insuffisante des moteurs, le projet reste en grande partie viable, même si certains ajustements devront être effectués. Je pense qu'un temps supplémentaire aurait permis de résoudre une partie substantielle des problèmes restants.
+
+### Alec Passolunghi
