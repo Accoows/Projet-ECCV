@@ -6,10 +6,11 @@
 //  Blynk Docs: https://docs.blynk.io/en/
 //  Docs install: https://www.gotronic.fr/pj2-35754-1803.pdf
 //  Tools -> Board -> esp8266 -> NodeMC 1.0 (ESP-12E)
+//  Pardon pour le franglais...
 // 
 
 // Network Blynk.Cloud
-#define BLYNK_TEMPLATE_ID "TMPL59chUkpoO"
+#define BLYNK_TEMPLATE_ID "TMPL5chUkpoO"
 #define BLYNK_TEMPLATE_NAME "ECCV Control"
 
 #define BLYNK_FIRMWARE_VERSION "0.1.2"
@@ -17,12 +18,12 @@
 #define BLYNK_PRINT Serial
 #define APP_DEBUG
 
-//Librairi Wifi/Blynk
+//Librairy Wifi/Blynk
 #include "BlynkEdgent.h"
 
 // Initilisation et création d'un wifi local
 
-// Motor PIN - L298N
+// Motor PIN - L298N & ESP8266 (voir ESP8266KIT)
 
 //Motor A (Gauche)
 #define ENA 4                // Pin ENA (GPIO4 - D2) (PWM A)
@@ -65,16 +66,19 @@ BLYNK_WRITE(V0) {
   Serial.println(speedGauche);
   
   if (speedGauche > 500) {                              //Forward G
+    Serial.print("Avant G: ");
     analogWrite(ENA, speedGauche);
     digitalWrite(speedMotor_A1, LOW);
     digitalWrite(speedMotor_A2, HIGH);
   }
   else if (speedGauche < -500) {                        //Backward G
+    Serial.print("Arrière G: ");
     analogWrite(ENA,-speedGauche);
     digitalWrite(speedMotor_A1, HIGH);
     digitalWrite(speedMotor_A2, LOW);
   }
   else {                                                //Stop
+    Serial.print("Stop G: ");
     analogWrite(ENA, LOW);
     digitalWrite(speedMotor_A1, LOW);
     digitalWrite(speedMotor_A2, LOW);
@@ -88,16 +92,19 @@ BLYNK_WRITE(V1) {
   Serial.println(speedDroit);
 
   if (speedDroit > 500) {                               //Forward D
+    Serial.print("Avant D: ");
     analogWrite(ENB, speedDroit);
     digitalWrite(speedMotor_B1, HIGH);
     digitalWrite(speedMotor_B2, LOW);
   }
   else if (speedDroit < -500) {                         //Backward D
+    Serial.print("Arrière D: ");
     analogWrite(ENB, -speedDroit);
     digitalWrite(speedMotor_B1, LOW);
     digitalWrite(speedMotor_B2, HIGH);
   }
   else {                                                //Stop
+    Serial.print("Stop D: ");
     analogWrite(ENB, LOW);
     digitalWrite(speedMotor_B1, LOW);
     digitalWrite(speedMotor_B2, LOW);
