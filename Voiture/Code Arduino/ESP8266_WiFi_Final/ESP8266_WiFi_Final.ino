@@ -10,7 +10,7 @@
 // 
 
 // Network Blynk.Cloud
-#define BLYNK_TEMPLATE_ID "TMPL5chUkpoO"
+#define BLYNK_TEMPLATE_ID "TMPL59chUkpoO"
 #define BLYNK_TEMPLATE_NAME "ECCV Control"
 
 #define BLYNK_FIRMWARE_VERSION "0.1.2"
