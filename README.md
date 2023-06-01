@@ -10,4 +10,10 @@ Projet réalisé en groupe avec 3 personnes par : Jules; Arthur; Alec
 
 # Description du projet
 
+Il s'agit de créer une voiture télécommandée contrôlée par un smartphone grâce à une application. L'application utilisée, appelée "Blynk", est disponible sur les plateformes IOS et Android. L'utilisateur peut utiliser des sliders pour contrôler les moteurs à l'avant de la voiture, en les déplaçant vers l'avant ou l'arrière individuellement.
 
+L'objectif est d'obtenir une portée de signal supérieure à 20 mètres en utilisant une connexion serveur via 4G entre le système embarqué de la voiture et le smartphone. Cette liaison permettra au smartphone de contrôler la voiture à distance et d'établir une communication fiable sur une distance étendue. Le smartphone envoie les données à un serveur Blynk, qui les transmet ensuite à la carte Wi-Fi pour activer les moteurs. Un système d'historique de connexion est intégré pour suivre la durée pendant laquelle l'engin reste connecté.
+
+![BlynkExample](https://cdn.discordapp.com/attachments/1073556996273471528/1113856982949052457/architecture.png)
+
+# Matériel utilisé
